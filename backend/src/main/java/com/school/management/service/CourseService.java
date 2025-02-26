@@ -21,4 +21,8 @@ public Course getCourseById(long id)
     return courseRepository.findById(id)
             .orElseThrow(()-> new EntityNotFoundException("Course is not present"));
 }
+    public void deleteStudent(Long id) {
+        courseRepository.deleteById(id);
+    }
+
 }
